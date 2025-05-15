@@ -4,7 +4,8 @@ import openai
 import base64
 
 app = Flask(__name__)
-openai.api_key = "YOUR_OPENAI_API_KEY"
+import os
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 PROMPT = """
 אתה מקבל קובץ Excel של שיבוץ חיילים.
